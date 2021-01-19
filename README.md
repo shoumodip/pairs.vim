@@ -12,7 +12,7 @@ Press the first character of a pair
 
 ### Remove a pair `<BS>`
 `(`**|**`)` &nbsp;&nbsp;If backspace is pressed, it will result in **|**\
-`\(`**|**`)` If backspace is pressed, it will result in `\(`**|**`)`\
+`\(`**|**`)` If backspace is pressed, it will result in `\`**|**`)`\
 `(`**|** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If backspace is pressed, it will result in **|**\
 `blah`**|** If backspace is pressed, it will result in `bla`**|**
 

@@ -11,7 +11,7 @@
 
 - <BS> Remove a pair.
   `(`|`)`   If backspace is pressed, it will result in |
-  `\(`|`)`  If backspace is pressed, it will result in `\(`|`)`
+  `\(`|`)`  If backspace is pressed, it will result in `\`|`)`
   `(`|    If backspace is pressed, it will result in |
   `blah`| If backspace is pressed, it will result in `bla`|
 
