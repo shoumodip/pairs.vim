@@ -115,7 +115,7 @@ function! pairs#expand()
   let mapping = "inoremap <buffer> <expr> <CR> "
   let mapping .= "strpart(getline('.'), col('.') - 2, 2) =~? '\\(" . pairs . "\\)'"
   let mapping .= " && strpart(getline('.'), col('.') - 3, 2) !~# '\\'"
-  let mapping .= ' ? "<CR><Esc>Oa<Esc>j==kA<BS>" : "<CR>"'
+  let mapping .= ' ? "<CR><Esc>Oa<Esc>j==kA<BS>" : pumvisible() ? "<C-y>" : "<C-g>u<CR>"'
 
   " Load the mapping
   execute mapping
