@@ -1,0 +1,6 @@
+b:auto_pairs	pairs.txt	/*b:auto_pairs*
+b:expand_pairs	pairs.txt	/*b:expand_pairs*
+g:auto_pairs	pairs.txt	/*g:auto_pairs*
+g:expand_pairs	pairs.txt	/*g:expand_pairs*
+pairs#generate()	pairs.txt	/*pairs#generate()*
+pairs.txt	pairs.txt	/*pairs.txt*

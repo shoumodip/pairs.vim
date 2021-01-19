@@ -1,0 +1,62 @@
+*pairs.txt* Automatic pairs in vim
+
+-----------------------------------------------------------------------------
+|Workings| Pairs will provide some mappings for pairs.  Let `()` be a pair and
+'|' be the cursor.
+
+- The first character of the pair -> Complete the pair
+
+  |  If `(` is pressed, it will result in `(`|`)`
+  `\`| If `(` is pressed, it will result in `\(`|
+
+- <BS> Remove a pair.
+  `(`|`)`   If backspace is pressed, it will result in |
+  `\(`|`)`  If backspace is pressed, it will result in `\(`|`)`
+  `(`|    If backspace is pressed, it will result in |
+  `blah`| If backspace is pressed, it will result in `bla`|
+
+- <CR> Expand a pair. Let `<>` be an automatic pair and `><` be a pair that
+  expands.
+
+  `<html>`|`</html>`
+
+  After pressing <CR>
+
+  `<html>`
+    |
+  `</html>`
+
+-----------------------------------------------------------------------------
+|Configuration|
+
+- *g:auto_pairs* The global list of pairs which auto-complete. Defaults to >
+                 ["()", "{}", "[]", "''", "``", '""']
+<
+- *g:expand_pairs* The global list of pairs which get expanded. Defaults to >
+                 {}
+
+- *b:auto_pairs* The local list of pairs which auto-complete. Examples >
+                 autocmd FileType html let b:auto_pairs = ["<>"]
+                 autocmd FileType help let b:auto_pairs = ["||", "**"]
+<
+- *b:expand_pairs* The local list of pairs which get expanded. Examples >
+                 autocmd FileType html let b:expand_pairs = ["><"]
+                 autocmd FileType sh let b:expand_pairs = ["()"]
+
+-----------------------------------------------------------------------------
+|Force|
+
+Normally pairs get generated for each buffer |once|. However if you wish to
+manually re-generate pairs for a buffer, it is totally possible.
+
+- *pairs#generate()* This is the function which generates the pairs for the
+current buffer. If no arguments are supplied or the argument supplied is `0`,
+it will not generate pairs for the buffer if the buffer is present in
+`g:buffers_pairs_loaded`. To force generate the pairs, give it a |non-zero|
+argument.
+>
+    :call pairs#generate(1) " Force generate the pairs for the current buffer
+<
+-----------------------------------------------------------------------------
+
+ vim:tw=78:et:ft=help
