@@ -4,19 +4,19 @@ Automatic pairs in vim
 ## Workings
 Pairs will provide some mappings for pairs.  Let `()` be a pair and **|** be the cursor.
 
-### Complete a pair
+### Complete a pair:
 Press the first character of a pair
 
 **|** &nbsp;&nbsp;&nbsp;&nbsp;If <kbd>(</kbd> is pressed, it will result in `(`**|**`)`\
 `\`**|** If <kbd>(</kbd> is pressed, it will result in `\(`**|**
 
-### Remove a pair <kbd>Backspace</kbd>
+### Remove a pair (<kbd>Backspace</kbd>):
 `(`**|**`)` &nbsp;&nbsp;If <kbd>Backspace</kbd> is pressed, it will result in **|**\
 `\(`**|**`)` If <kbd>Backspace</kbd> is pressed, it will result in `\`**|**`)`\
 `(`**|** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <kbd>Backspace</kbd> is pressed, it will result in **|**\
 `blah`**|** If <kbd>Backspace</kbd> is pressed, it will result in `bla`**|**
 
-### Expand a pair <kbd>Enter</kbd> or <kbd>CR</kbd>
+### Expand a pair (<kbd>Enter</kbd> or <kbd>CR</kbd>):
 Let `<>` be an automatic pair and `><` be a pair that expands.
 
 `<html>`**|**`</html>`
